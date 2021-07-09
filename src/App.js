@@ -7,7 +7,7 @@ import { Provider as ReduxProvider } from "react-redux";
 
 import store from "./redux/store";
 import BooksPage from "./containers/BooksPage";
-import AddBook from "./components/AddBook";
+import AddBookPage from "./containers/AddBookPage";
 
 const useStyles = makeStyles((_) => ({
   root: {
@@ -37,7 +37,7 @@ function App() {
               <BooksPage />
             </Route>
             <Route path="/add-book">
-              <AddBook />
+              <AddBookPage />
             </Route>
           </Switch>
         </div>

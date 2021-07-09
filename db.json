@@ -2,8 +2,33 @@
   "books": [
     {
       "id": 1,
-      "title": "Erik Z",
-      "category": "Novel"
+      "title": "A World Without Work",
+      "category": "Business"
+    },
+    {
+      "title": "Heaven",
+      "category": "Novel",
+      "id": 2
+    },
+    {
+      "title": "Reset",
+      "category": "Biography",
+      "id": 3
+    },
+    {
+      "title": "Added from Postman",
+      "category": "A new category from Postman",
+      "id": 4
+    },
+    {
+      "title": "New book from UI",
+      "category": "UI Category",
+      "id": 5
+    },
+    {
+      "title": "New Book2",
+      "category": "category test",
+      "id": 6
     }
   ]
 }

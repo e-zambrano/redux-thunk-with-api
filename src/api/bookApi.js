@@ -6,9 +6,9 @@ export function getBooks() {
   return fetch(bookUrl).then(handleResponse).catch(handleError);
 }
 
-export function saveBook(book) {
-  return fetch(bookUrl + (book.id || ""), {
-    method: book.id ? "PUT" : "POST", // POST for create, PUT to update when id already exists.
+export function createBook(book) {
+  return fetch(bookUrl, {
+    method: "POST", // POST for create
     headers: { "content-type": "application/json" },
     body: JSON.stringify(book),
   })
