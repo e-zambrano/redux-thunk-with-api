@@ -17,7 +17,7 @@ export function createBook(book) {
 }
 
 export function deleteBook(bookId) {
-  return fetch(bookUrl + bookId, { method: "DELETE" })
+  return fetch(`${bookUrl}/${bookId}`, { method: "DELETE" })
     .then(handleResponse)
     .catch(handleError);
 }
