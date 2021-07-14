@@ -37,6 +37,10 @@ function BookPage(props) {
     }
   }, []);
 
+  function handleDeleteBook(bookId) {
+    props.deleteBook(bookId);
+  }
+
   return (
     <TableContainer className={classes.paper} component={Paper}>
       <Table>
@@ -60,6 +64,7 @@ function BookPage(props) {
                   color="primary"
                   aria-label="delete book"
                   component="span"
+                  onClick={() => handleDeleteBook(book.id)}
                 >
                   <DeleteIcon />
                 </IconButton>

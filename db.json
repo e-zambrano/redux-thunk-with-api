@@ -16,19 +16,9 @@
       "id": 3
     },
     {
-      "title": "Added from Postman",
-      "category": "A new category from Postman",
-      "id": 4
-    },
-    {
-      "title": "New book from UI",
-      "category": "UI Category",
-      "id": 5
-    },
-    {
-      "title": "New Book2",
+      "title": "Hi, new book",
       "category": "category test",
-      "id": 6
+      "id": 4
     }
   ]
 }
