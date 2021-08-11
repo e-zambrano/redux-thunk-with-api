@@ -8,6 +8,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import store from "./redux/store";
 import BooksPage from "./containers/BooksPage";
 import AddBookPage from "./containers/AddBookPage";
+import UpdateBookPage from "./containers/UpdateBookPage";
 
 const useStyles = makeStyles((_) => ({
   root: {
@@ -39,6 +40,7 @@ function App() {
             <Route path="/add-book">
               <AddBookPage />
             </Route>
+            <Route path="/edit-book/:id" component={UpdateBookPage} />
           </Switch>
         </div>
       </Router>

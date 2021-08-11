@@ -21,3 +21,13 @@ export function deleteBook(bookId) {
     .then(handleResponse)
     .catch(handleError);
 }
+
+export function updateBook(book) {
+  return fetch(`${bookUrl}/${book.id}`, {
+    method: "PUT",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(book),
+  })
+    .then(handleResponse)
+    .catch(handleError);
+}

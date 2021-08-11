@@ -28,7 +28,7 @@ export function createBook(book) {
 
 export function createBookSuccess(book) {
   return {
-    type: ActionTypes.CREATE_BOOKS,
+    type: ActionTypes.CREATE_BOOKS_SUCCESS,
     book,
   };
 }
@@ -54,5 +54,21 @@ export function deleteBookSuccess(bookId) {
   return {
     type: ActionTypes.DELETE_BOOK_SUCCESS,
     bookId,
+  };
+}
+
+export function updateBook(book) {
+  return function (dispatch) {
+    return bookApi
+      .updateBook(book)
+      .then((updatedBook) => dispatch(updateBookSuccess(updatedBook)))
+      .catch((error) => console.log(error));
+  };
+}
+
+export function updateBookSuccess(updatedBook) {
+  return {
+    type: ActionTypes.UPDATE_BOOK_SUCCESS,
+    updatedBook,
   };
 }
