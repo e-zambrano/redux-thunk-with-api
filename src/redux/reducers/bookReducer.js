@@ -1,6 +1,5 @@
 import * as ActionTypes from "../actions/actionTypes";
 
-//reduces modified the state
 export default function bookReducer(state = [], action) {
   switch (action.type) {
     case ActionTypes.LOAD_BOOKS_SUCCESS:

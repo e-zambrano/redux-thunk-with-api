@@ -32,7 +32,6 @@ const useStyles = makeStyles({
 function BookPage(props) {
   const classes = useStyles();
 
-  //ComponentDidMount() { }
   useEffect(() => {
     if (props.books.length === 0) {
       props.loadBooks();

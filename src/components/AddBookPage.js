@@ -4,7 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   paper: {
@@ -26,7 +26,6 @@ const useStyles = makeStyles({
 
 function AddBookPage(props) {
   const classes = useStyles();
-  let history = useHistory();
   const [book, setBook] = useState({ title: "", category: "" });
 
   function handleInputChanges(event) {
@@ -41,7 +40,7 @@ function AddBookPage(props) {
   function handleFormSubmit(event) {
     event.preventDefault(); //prevent from page to reload
 
-    props.createBook(book).then(() => history.push("/books"));
+    props.createBook(book).then(() => props.history.push("/books"));
   }
 
   return (

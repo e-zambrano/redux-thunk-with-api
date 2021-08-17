@@ -33,23 +33,15 @@ export function createBookSuccess(book) {
   };
 }
 
-//is in charge of calling the API
-//using redux-thunk under the hood
 export function deleteBook(bookId) {
   return function (dispatch) {
-    //connect to the outside - API
-    //start of the API call
-    return (
-      bookApi
-        .deleteBook(bookId)
-        //end of the API call
-        .then(() => dispatch(deleteBookSuccess(bookId))) //when the API call was successful
-        .catch((error) => console.log(error))
-    ); //when the API cal was not successful
+    return bookApi
+      .deleteBook(bookId)
+      .then(() => dispatch(deleteBookSuccess(bookId)))
+      .catch((error) => console.log(error));
   };
 }
 
-//is in charge of telling the Store that the previous event was successful
 export function deleteBookSuccess(bookId) {
   return {
     type: ActionTypes.DELETE_BOOK_SUCCESS,
