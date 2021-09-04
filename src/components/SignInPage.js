@@ -21,6 +21,10 @@ const useStyles = makeStyles({
   button: {
     marginRight: 20,
   },
+  errorMessage: {
+    color: "red",
+    marginBottom: 20,
+  },
 });
 
 function SignIpPage(props) {
@@ -43,7 +47,7 @@ function SignIpPage(props) {
     props
       .signInUser(user)
       .then(() => props.history.push("/books"))
-      .catch((error) => setError(error));
+      .catch((error) => setError("Incorrect username or password"));
   }
 
   return (
@@ -52,7 +56,7 @@ function SignIpPage(props) {
         <Typography className={classes.title} variant="h4">
           Sign in to book-it
         </Typography>
-        <div>{error}</div>
+        <div className={classes.errorMessage}>{error}</div>
         <form onSubmit={handleFormSubmit}>
           <TextField
             required
